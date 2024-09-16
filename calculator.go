@@ -43,6 +43,13 @@ func divide(a, b int) int {
 	return a / b
 }
 
+func divideRoman(a, b int) int {
+	if a < b {
+		panic("Ошибка! Римское число не может быть меньше нуля")
+	}
+	return a / b
+}
+
 func romanToInt(s1 string) int {
 
 	switch {
@@ -187,7 +194,7 @@ func main() {
 		case "*":
 			result = multiply(number1, number2)
 		case "/":
-			result = divide(number1, number2)
+			result = divideRoman(number1, number2)
 		default:
 			panic("Неправильный оператор!")
 		}
